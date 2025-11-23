@@ -1,0 +1,272 @@
+:root {
+  --teal: #1f6b74;
+  --teal-dark: #174f54;
+  --muted: #e9f3f4;
+  --text: #222222;
+  --photo-size: 180px;
+  --photo-size-sm: 110px;
+  --serif: "Playfair Display", serif;
+  --sans: "Open Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--text);
+  background: #f7f7f7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.resume {
+  max-width: 1050px;
+  margin: 30px auto;
+  display: flex;
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 320px;
+  background: var(--teal);
+  color: #fff;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.photo {
+  width: var(--photo-size);
+  height: var(--photo-size);
+  border-radius: 50%;
+  border: 6px solid rgba(0, 0, 0, 0.12);
+  align-self: center;
+  background: transparent;
+  display: block;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sidebar .section h2 {
+  font-family: var(--serif);
+  color: #fff;
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  letter-spacing: 0.6px;
+}
+
+.sidebar .section p,
+.sidebar .section ul {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.sidebar .section ul {
+  padding-left: 16px;
+}
+.sidebar .section ul li {
+  margin-bottom: 8px;
+}
+
+.content {
+  flex: 1;
+  padding: 34px 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.name {
+  font-family: var(--serif);
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.name .first {
+  display: inline;
+  color: var(--teal);
+  font-size: 40px;
+  line-height: 1;
+}
+.name .last {
+  display: inline;
+  color: #000;
+  font-size: 40px;
+  letter-spacing: 0.6px;
+}
+
+.contacts {
+  color: #4b4b4b;
+  font-size: 14px;
+}
+
+.section {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 3px solid var(--muted);
+}
+.section h3 {
+  margin: 0 0 10px 0;
+  font-family: var(--serif);
+  color: var(--teal-dark);
+  font-size: 16px;
+}
+
+.section ul {
+  list-style: disc;
+  margin-left: 18px;
+}
+
+.historico .job {
+  margin-bottom: 16px;
+}
+.historico .period {
+  font-size: 13px;
+  color: #6b6b6b;
+  margin-bottom: 6px;
+}
+.historico .role {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.historico ul {
+  margin: 0 0 0 18px;
+}
+
+.educacao ul,
+.idiomas ul,
+.certificacoes ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+a {
+  color: var(--teal-dark);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 880px) {
+  .resume {
+    flex-direction: column;
+    margin: 10px;
+  }
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    gap: 12px;
+    padding: 18px;
+    align-items: center;
+  }
+  .sidebar .section {
+    display: none;
+  }
+  .photo {
+    width: var(--photo-size-sm);
+    height: var(--photo-size-sm);
+    border-width: 4px;
+  }
+  .name .first {
+    font-size: 26px;
+  }
+  .name .last {
+    font-size: 26px;
+  }
+}
+
+/* Footer */
+.site-footer {
+  border-top: 3px solid var(--muted);
+  background: #fff;
+  padding: 18px 24px;
+}
+.site-footer .container {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #666;
+  font-size: 13px;
+}
+.site-footer a {
+  color: var(--teal-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-whatsapp-link {
+  color: var(--teal-dark);
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.site-footer .dot {
+  margin: 0 8px;
+  color: #999;
+}
+
+@media (max-width: 600px) {
+  .site-footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .site-footer .footer-right {
+    margin-top: 8px;
+  }
+}
+
+.floating-whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 28px;
+  line-height: 1;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+.floating-whatsapp-btn:hover,
+.floating-whatsapp-btn:focus {
+  background-color: #1ebe57;
+  outline: none;
+}
+
+.site-footer .footer-right {
+  display: none;
+}
